@@ -1,0 +1,232 @@
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Getting a password for [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No user [Owlslee] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No user [] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - INFO  --> Saving an anime [title] 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
+now - DEBUG --> Getting a connection. 
+now - INFO  --> No animes 
