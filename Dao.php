@@ -76,6 +76,22 @@ class Dao {
     return $results;
     }
 
+  public function getOneAnime ($title) {
+    $conn = $this->getConnection();
+    $getQuery = "select *  from animes where title = :title";
+    $q = $conn->prepare($getQuery);
+    $q->bindParam(":title", $title);
+    $q->execute();
+    $results = $q->setFetchMode(PDO::FETCH_ASSOC);
+    $results = $q->fetchAll();
+    if(empty($results))
+	{
+		    $this->logger->LogInfo("No anime [{$title}]");
+		    return null;
+	}
+    return $results;
+    }
+
   public function createUser ($username, $password, $email) {
     $this->logger->LogInfo("Saving a user [{$username}]");
     $conn = $this->getConnection();

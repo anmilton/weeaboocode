@@ -1,10 +1,14 @@
 <?php
-session_start();
-if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-  $_SESSION['message'] = "Please log in.";
-  header("Location: login.php");
-  exit();
-}
+  session_start();
+  require_once "Dao.php";
+  $dao = new Dao();
+  $anime = $dao->getOneAnime ($_GET['title']);
+
+//if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+ // $_SESSION['message'] = "Please log in.";
+  //header("Location: login.php");
+  //exit();
+//}
 ?>
 <html>
 	<head>
@@ -59,45 +63,31 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
       			</li>
     			</ul>
 		</div>
+				<div class="headers">
+					<label for:"title"><?php echo htmlspecialchars($anime[0]['title']) ?></label>
 
-
-		<div class="headers">
-			Add Anime Title
-		</div>
-		<form method="post" action="create_anime_handler.php" enctype="multipart/form-data>
-			<div class="signup">
-				<div class="signup">
-					<label for:"title">Title:</label>
 				</div>
- 					<input class="signuptext" type="text" name="title" id="title">
-				<div class="signup">
+ 					
+				<div class="subheaders">
 					<label for="tvrating">TVRating:</label>
 				</div>
-					<input class="signuptext" type="text" name="tvrating" id="tvrating">
-				<div class="signup">
+				<div>
+					<?php echo htmlspecialchars($anime[0]['tvrating']) ?>
+				</div>
+					
+				<div class="subheaders">
 					<label for="genre">Genre:</label>
 				</div>
-					<input class="signuptext" type="text" name="genre" id="genre">
-				<div class="signup">
+				<div>
+					<?php echo htmlspecialchars($anime[0]['genre']) ?>
+				</div>
+					
+				<div class="subheaders">
 					<label for="discription">Description:</label>
 				</div>
 				<div>
-					<input class="box" type="textarea" name="description" id="description" placeholder="No Spoliers...">
+					<?php echo htmlspecialchars($anime[0]['description']) ?>
 				</div>
-<?php
-      if (isset($_SESSION['messages'])) {
-        foreach($_SESSION['messages'] as $message) {
-          echo "<div>{$message}</div>";
-        }
-      }
-      unset($_SESSION['message']);
-      unset($_SESSION['form_input']);
-?>
-				<div class="submitbut">
-					<input type="submit" value="Create Anime">
-				</div>
-			</div>
-		</form>
 
 
 		<div class="footer">

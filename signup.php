@@ -34,7 +34,12 @@ session_start();
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Login</button>
+  					<button class="dropbut"><?php
+						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    						echo 'Login'; }
+						else {
+						echo 'Logout';} ?>
+					</button>
   					<div class="dropdown-content">
 						<?php
 						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {

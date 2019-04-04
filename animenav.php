@@ -35,7 +35,12 @@
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Login</button>
+  					<button class="dropbut"><?php
+						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    						echo 'Login'; }
+						else {
+						echo 'Logout';} ?>
+					</button>
   					<div class="dropdown-content">
 						<?php
 						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
@@ -89,7 +94,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -100,7 +105,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -111,7 +116,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -122,7 +127,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -133,7 +138,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -144,7 +149,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -155,7 +160,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -166,7 +171,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -177,7 +182,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -188,7 +193,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -199,7 +204,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -210,7 +215,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -221,7 +226,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -232,7 +237,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -243,7 +248,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -254,7 +259,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -265,7 +270,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -276,7 +281,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -287,7 +292,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -298,7 +303,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -309,7 +314,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -320,7 +325,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -331,7 +336,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -342,7 +347,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -353,7 +358,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
@@ -364,7 +369,7 @@
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
