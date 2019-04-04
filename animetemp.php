@@ -2,13 +2,14 @@
   session_start();
   require_once "Dao.php";
   $dao = new Dao();
-  $anime = $dao->getOneAnime ($_GET['title']);
-
-//if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
- // $_SESSION['message'] = "Please log in.";
-  //header("Location: login.php");
-  //exit();
-//}
+  if (isset($_GET['title'])) {
+	$anime = $dao->getOneAnime ($_GET['title']);
+	$title = $_GET['title'];
+  }
+  else {
+	$anime = $dao->getOneAnime ($_SESSION['title']);
+	$title = $_SESSION['title'];
+  }
 ?>
 <html>
 	<head>
@@ -88,7 +89,32 @@
 				<div>
 					<?php echo htmlspecialchars($anime[0]['description']) ?>
 				</div>
+		<div class="headers">Comments</div>
+		<form method="post" action="comment_handler.php">
+		<div>comment: <input value="<?php echo isset($_SESSION['form_input']['comment']) ? $_SESSION['form_input']['comment'] : ''; ?>"type="text" name="comment"></div>
+		<input type="hidden" name="title" value="<?php echo $anime[0]['title'];?>">
+			<?php
+			if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+    			echo 'Please login to comment!'; }
+			else {
+			echo '<div><input type="submit" value="Submit"></div>' ;} ?>
 
+		<?php if (isset($_SESSION['message'])) {
+			$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "good" : "bad";
+			echo "<div class='" . $sentiment . "' id='message'>" . $_SESSION['message'] . "</div>";
+		}
+		unset($_SESSION['message']);
+      		unset($_SESSION['form_input']);?>
+		</form>
+
+		<?php
+			$comments = $dao->getComments($title);
+   			echo "<table id='comments'>";
+   			foreach ($comments as $comment) {
+     				echo "<tr><td>" . $comment['username'] . "</td></td><td>" . htmlspecialchars($comment['comment']) . "</td><td>" . $comment['datecreated'] . "</td></tr>";
+   			}
+   		echo "</table>";
+   		?>
 
 		<div class="footer">
 			Weeaboo Trash Reviews &copy;2019 Ashlee Milton

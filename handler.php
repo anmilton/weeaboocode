@@ -11,6 +11,7 @@
     exit();
   } else {
     $_SESSION['logged_in'] = true;
+    $_SESSION['username'] = $user[0]['username'];
     $_SESSION['message'] = "Welcome back to the heap!";
     header("Location: login.php");
   }
