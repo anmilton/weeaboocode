@@ -5,6 +5,7 @@ session_start();
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	</head>
 	<header><title>Login</title></header>
 	<body>
@@ -33,7 +34,7 @@ session_start();
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut"><?php
+  					<button class="active"><?php
 						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     						echo 'Login'; }
 						else {
@@ -61,16 +62,19 @@ session_start();
 		</div>
 		<form method="post" action="handler.php">
 			<div class="login">
-      			<span><label for="password">Username:</label> <input type="text" id="username" name="username">
+      			<span><label for="password">Username:</label> <input type="text" id="username" name="username" value="<?php echo isset($_SESSION['form_input']['username']) ? $_SESSION['form_input']['username'] : ''; ?>">
 			</span>
       			<span><label for="username">Password:</label> <input type="password" id="password" name="password">
 			</span>
 			</div>
      			<?php
      				 if (isset($_SESSION['message'])) {
-        			 echo "<div id='message'>" . $_SESSION['message'] . "</div>";
-      				  }
-      				 unset($_SESSION['message']);
+					$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "valid" : "invalid";
+        			 echo "<div id='message' class='" . $sentiment . "'>" . $_SESSION['message'] . "</div>";
+						}
+					   unset($_SESSION['message']);
+					   unset($_SESSION['good']);
+					   unset($_SESSION['form_input']);
       			?>
 			<div class="submitbut">
 				<input type="submit" value="Login">

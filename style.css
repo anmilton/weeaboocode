@@ -2,8 +2,10 @@
   color: Black;
   height: 100px;
   line-height: 100px;
-  font-size: 20px;
+  font-size: 21px;
   margin-bottom: 10px;
+  font-family: 'Nova Mono', monospace;
+  min-width: 650px;
 }
 
 .logo {
@@ -25,7 +27,7 @@
   display: inline;
   margin: 0px;
   padding: 0px;
-  overflow: hidden
+  overflow: hidden;
   background-color: Gray;
 }
 
@@ -33,13 +35,24 @@
   background-color: Gray;
   color: white;
   padding: 16px;
-  font-size: 16px;
+  font-size: 18px;
   border: none;
+  font-family: 'Nova Mono', monospace;
+}
+
+.active {
+  background-color: Gray;
+  color: deepskyblue;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  font-family: 'Nova Mono', monospace;
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  width: 140px;
 }
 
 .dropdown-content {
@@ -48,6 +61,8 @@
   background-color: Black;
   min-width: 100px;
   z-index: 1;
+  font-family: 'Nova Mono', monospace;
+  width: 140px;
 }
 
 .dropdown-content a {
@@ -59,17 +74,21 @@
 
 .dropdown-content a:hover {background-color: DeepSkyBlue;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {display: block;  width: 140px;}
 
-.dropdown:hover .dropbut {background-color: Black;}
+.dropdown:hover .dropbut {background-color: Black; width: 140px; text-align: left;}
+
+.dropdown:hover .active {background-color: Black; width: 140px; text-align: left;}
 
 .headers {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 20px;
   background-color: DeepSkyBlue;
   color: White;
+  font-family: 'Nova Mono', monospace;
+  font-weight: bold;
 }
 
 .animeblock {
@@ -82,16 +101,58 @@
   margin-bottom: 10px;
   margin-left: 20px;
   padding: 10px;
-  font-size: 14px;
-  background-color: DeepSkyBlue;
-  color: Black;
+  font-size: 18px;
+  background-color: Gray;
+  color: White;
+  font-family: 'Nova Mono', monospace;
+}
+
+.animetitle {
+  margin-left: 40px;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Nova Mono', monospace;
+}
+
+.animetitle a {
+  color: deepskyblue;
+  word-wrap: normal;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: 'Nova Mono', monospace;
+}
+
+.commenttitle {
+  font-size: 16px;
+  text-decoration: none;
+  font-family: 'Nova Mono', monospace;
 }
 
 .animeeach {
   text-align: center;
+  font-weight: bold;
+  font-family: 'Nova Mono', monospace;
+  font-size: 25px;
   display: inline-block;
-  margin: 50px 50px 50px 50px;
+  color: DeepSkyBlue;
+  width: 33%;
+  height: 50%;
+  background-image: url("cherry2.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: -webkit-baseline-middle;
 }
+
+.animeeach a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  top: 45%;
+}
+
 .animeimg {
   display: block;
   width:150px;
@@ -108,6 +169,8 @@
   background-color: Gray;
   text-align: center;
   color: white;
+  font-family: 'Nova Mono', monospace;
+  margin-top: 5px;
 }
 
 .submitbut {
@@ -115,10 +178,22 @@
   text-align: center;
 }
 
+.submitbut input {
+  font-family: 'Nova Mono', monospace;
+  color: white;
+  background-color: Gray;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
 .box {
   width: 95%;
   height: 75px;
-margin-left: 50px;
+  margin-left: 50px;
+  margin-top: 20px;
+  font-family: 'Nova Mono', monospace;
 }
 
 .check {
@@ -133,21 +208,28 @@ margin-left: 50px;
   color: white;
   background-color: Gray;
   font-size: 16px;
+  font-family: 'Nova Mono', monospace;
 }
 
 .signup {
   margin-left: 40px;
   margin-top: 20px;
-  color: black;
   font-size: 16px;
   background-color: Gray;
   color:white;
-  width: 25%;
+  width: 75%;
+  font-family: 'Nova Mono', monospace;
+}
+
+.signup label {
+  margin-left: 5px;
 }
 
 .signuptext {
    margin-left: 50px;
    margin-top: 20px;
+   width: 50%;
+   font-family: 'Nova Mono', monospace;
 }
 
 .alphablock {
@@ -168,7 +250,54 @@ margin-left: 50px;
   display: inline;
   margin: 0px;
   padding: 0px;
-  overflow: hidden
+  overflow: hidden;
   background-color: Gray;
   text-decoration: none;
+  font-family: 'Nova Mono', monospace;
+}
+
+.alphalist a {
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 3px solid deepskyblue;
+  font-family: 'Nova Mono', monospace;
+}
+
+td:nth-child(1) {
+  width: 25%;
+}
+
+td:nth-child(2) {
+  width: 50%;
+}
+
+td:nth-child(3) {
+  width: 25%;
+}
+
+.invalid {
+  background-color: #ff87a0;
+  font-family: 'Nova Mono', monospace;
+  font-weight: bold;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.valid {
+  background-color: deepskyblue;
+  font-family: 'Nova Mono', monospace;
+  font-weight: bold;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
 }

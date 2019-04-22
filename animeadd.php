@@ -10,8 +10,9 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	</head>
-	<header><title>Join us</title></header>
+	<header><title>Add To The Heap</title></header>
 	<body>
 		<div class="banner">
 			<img class="logo" src="weeblogo.png" alt="logo"/>
@@ -29,7 +30,7 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Anime</button>
+  					<button class="active">Anime</button>
   					<div class="dropdown-content">
     						<a href="animenav.php">Alphabetical</a>
     						<a href="animeadd.php">Submission</a>
@@ -64,34 +65,35 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
 		<div class="headers">
 			Add Anime Title
 		</div>
-		<form method="post" action="create_anime_handler.php" enctype="multipart/form-data>
+		<form id="anime" method="post" action="create_anime_handler.php" enctype="multipart/form-data>
 			<div class="signup">
 				<div class="signup">
 					<label for:"title">Title:</label>
 				</div>
- 					<input class="signuptext" type="text" name="title" id="title">
+ 					<input class="signuptext" type="text" name="title" id="title" value="<?php echo isset($_SESSION['form_input']['title']) ? $_SESSION['form_input']['title'] : ''; ?>">
 				<div class="signup">
 					<label for="tvrating">TVRating:</label>
 				</div>
-					<input class="signuptext" type="text" name="tvrating" id="tvrating">
+					<input class="signuptext" type="text" name="tvrating" id="tvrating" value="<?php echo isset($_SESSION['form_input']['tvrating']) ? $_SESSION['form_input']['tvrating'] : ''; ?>">
 				<div class="signup">
 					<label for="genre">Genre:</label>
 				</div>
-					<input class="signuptext" type="text" name="genre" id="genre">
+					<input class="signuptext" type="text" name="genre" id="genre" value="<?php echo isset($_SESSION['form_input']['genre']) ? $_SESSION['form_input']['genre'] : ''; ?>">
 				<div class="signup">
 					<label for="discription">Description:</label>
 				</div>
 				<div>
-					<input class="box" type="textarea" name="description" id="description" placeholder="No Spoliers...">
+					<textarea form="anime" class="box" name="description" id="description" placeholder="No Spoliers..."><?php echo isset($_SESSION['form_input']['description']) ? $_SESSION['form_input']['description'] : ''; ?></textarea>
 				</div>
 <?php
       if (isset($_SESSION['messages'])) {
+		$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "valid" : "invalid";
         foreach($_SESSION['messages'] as $message) {
-          echo "<div>{$message}</div>";
+		  echo "<div class='" . $sentiment . "'>{$message}</div>";
         }
       }
-      unset($_SESSION['message']);
-      unset($_SESSION['form_input']);
+      unset($_SESSION['messages']);
+			unset($_SESSION['form_input']);
 ?>
 				<div class="submitbut">
 					<input type="submit" value="Create Anime">

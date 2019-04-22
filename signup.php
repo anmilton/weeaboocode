@@ -6,6 +6,7 @@ session_start();
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	</head>
 	<header><title>Join us</title></header>
 	<body>
@@ -34,7 +35,7 @@ session_start();
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut"><?php
+  					<button class="active"><?php
 						if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
     						echo 'Login'; }
 						else {
@@ -78,16 +79,18 @@ session_start();
 					<label for="e-mail">E-mail:</label>
 				</div>
 				<div>
-					<input class="signuptext" type="text" name="email" id="email" placeholder="Not really, join anyways...">
+					<input class="signuptext"  value="<?php echo isset($_SESSION['form_input']['username']) ? $_SESSION['form_input']['email'] : ''; ?>" type="text" name="email" id="email" placeholder="Not really, join anyways...">
 				</div>
 <?php
       if (isset($_SESSION['messages'])) {
+				$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "valid" : "invalid";
         foreach($_SESSION['messages'] as $message) {
-          echo "<div>{$message}</div>";
+          echo "<div class='" . $sentiment . "'>{$message}</div>";
         }
       }
-      unset($_SESSION['message']);
-      unset($_SESSION['form_input']);
+      unset($_SESSION['messages']);
+			unset($_SESSION['form_input']);
+			unset($_SESSION['good']);
 ?>
 				<div class="submitbut">
 					<input type="submit" value="Create User">

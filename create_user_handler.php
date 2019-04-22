@@ -35,16 +35,18 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   $valid = false;
 }
 if (!$valid) {
-    $_SESSION['messages'] = $messages;
-    $_SESSION['form_input'] = $_POST;
-    header("Location: signup.php");
-    exit();
+  $_SESSION['good'] = false;
+  $_SESSION['messages'] = $messages;
+  $_SESSION['form_input'] = $_POST;
+  header("Location: signup.php");
+  exit();
 }
 
 require_once 'Dao.php';
 $dao = new Dao();
 $dao->createUser ($username, $password1, $email);
 $messages[] = "Welcome to the heap!";
+$_SESSION['good'] = true;
 $_SESSION['messages'] = $messages;
 //echo "CONGRATS YOU CREATE A USER";
 header("Location: signup.php");

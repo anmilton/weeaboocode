@@ -10,6 +10,7 @@ $valid = true;
 $messages = array();
 if (empty($title)) {
   $messages[] = "Please enter a title";
+  $_SESSION['good'] = false;
   $valid = false;
 }
 if (empty($tvrating)) {
@@ -27,6 +28,7 @@ if (empty($description)) {
 if (!$valid) {
     $_SESSION['messages'] = $messages;
     $_SESSION['form_input'] = $_POST;
+    $_SESSION['good'] = false;
     header("Location: animeadd.php");
     exit();
 }
@@ -36,6 +38,7 @@ $dao = new Dao();
 $dao->createAnime ($title, $tvrating, $genre, $description);
 $messages[] = "Thanks for Adding!";
 $_SESSION['messages'] = $messages;
+$_SESSION['good'] = true;
 //echo "CONGRATS YOU CREATE AN ANIME";
 header("Location: animeadd.php");
 exit;

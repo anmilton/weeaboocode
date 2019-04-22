@@ -15,8 +15,9 @@
 	<head>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	</head>
-	<header><title>Join us</title></header>
+	<header><title><?php echo $title?></title></header>
 	<body>
 		<div class="banner">
 			<img class="logo" src="weeblogo.png" alt="logo"/>
@@ -34,7 +35,7 @@
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Anime</button>
+  					<button class="active">Anime</button>
   					<div class="dropdown-content">
     						<a href="animenav.php">Alphabetical</a>
     						<a href="animeadd.php">Submission</a>
@@ -72,46 +73,46 @@
 				<div class="subheaders">
 					<label for="tvrating">TVRating:</label>
 				</div>
-				<div>
+				<div class="animetitle">
 					<?php echo htmlspecialchars($anime[0]['tvrating']) ?>
 				</div>
 					
 				<div class="subheaders">
 					<label for="genre">Genre:</label>
 				</div>
-				<div>
+				<div class="animetitle">
 					<?php echo htmlspecialchars($anime[0]['genre']) ?>
 				</div>
 					
 				<div class="subheaders">
 					<label for="discription">Description:</label>
 				</div>
-				<div>
-					<?php echo htmlspecialchars($anime[0]['description']) ?>
+				<div class="animetitle">
+					<?php echo "<pre>" . htmlspecialchars($anime[0]['description']) . "</pre>"?>
 				</div>
 		<div class="headers">Comments</div>
-		<form method="post" action="comment_handler.php">
-		<div>comment: <input value="<?php echo isset($_SESSION['form_input']['comment']) ? $_SESSION['form_input']['comment'] : ''; ?>"type="text" name="comment"></div>
+		<form method="post" action="comment_handler.php" id="comment">
+		<div class="commenttitle">Comment: <textarea class="box" form="comment" value="<?php echo isset($_SESSION['form_input']['comment']) ? $_SESSION['form_input']['comment'] : ''; ?>"type="text" name="comment"></textarea></div>
 		<input type="hidden" name="title" value="<?php echo $anime[0]['title'];?>">
 			<?php
 			if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
-    			echo 'Please login to comment!'; }
+    			echo '<div class="invalid"> Please login to comment!</div>'; }
 			else {
-			echo '<div><input type="submit" value="Submit"></div>' ;} ?>
+			echo '<div class="submitbut"><input type="submit" value="Submit"></div>' ;} ?>
 
 		<?php if (isset($_SESSION['message'])) {
 			$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "good" : "bad";
 			echo "<div class='" . $sentiment . "' id='message'>" . $_SESSION['message'] . "</div>";
 		}
 		unset($_SESSION['message']);
-      		unset($_SESSION['form_input']);?>
+      	unset($_SESSION['form_input']);?>
 		</form>
 
 		<?php
 			$comments = $dao->getComments($title);
-   			echo "<table id='comments'>";
+   			echo "<table id='comments'><tr><th>Username</th><th>Comment</th><th>Timestamp</th>";
    			foreach ($comments as $comment) {
-     				echo "<tr><td>" . $comment['username'] . "</td></td><td>" . htmlspecialchars($comment['comment']) . "</td><td>" . $comment['datecreated'] . "</td></tr>";
+     				echo "<tr><td>" . htmlspecialchars($comment['username']) . "</td></td><td>" . htmlspecialchars($comment['comment']) . "</td><td>" . $comment['datecreated'] . "</td></tr>";
    			}
    		echo "</table>";
    		?>

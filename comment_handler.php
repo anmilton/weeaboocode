@@ -16,6 +16,7 @@ if (!$valid) {
     $_SESSION['messages'] = $messages;
     $_SESSION['form_input'] = $_POST;
     $_SESSION['title'] = $_POST['title'];
+    $_SESSION['good'] = false;
     header("Location: animetemp.php");
     exit();
 }
@@ -24,5 +25,6 @@ $dao = new Dao();
 $dao->saveComment($comment, $_SESSION['username'], $_POST['title']);
 $_SESSION['message'] = "Thanks for posting!";
 $_SESSION['title'] = $_POST['title'];
+$_SESSION['good'] = true;
 header("Location: animetemp.php");
 exit;

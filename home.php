@@ -6,10 +6,11 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 		<link rel="icon" type="icon" href="favicon.ico">
 	</head>
 
-	<header><title>Home Page</title></header>
+	<header><title>Home</title></header>
 	<body>
 		<div class="banner">
 			<img class="logo" src="weeblogo.png" alt="logo"/>
@@ -19,7 +20,7 @@
 			<ul class="menu">
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Home</button>
+  					<button class="active">Home</button>
   					<div class="dropdown-content">
 						<a href="home.php">Home</a>
   					</div>
@@ -65,7 +66,7 @@
 				$animetitles = $dao->getAnimes ();
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<span class='animeeach'>" . htmlspecialchars($animetitle['title']) . "</span>";
+					echo "<span class='animeeach'> <a href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a> </span>";
 				}
 			?>
 		</div>

@@ -5,8 +5,11 @@
 ?>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="scroll.js"></script>
 		<link rel="stylesheet" href="style.css">
 		<link rel="icon" type="icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 		</head>
 	<header><title>Anime</title></header>
 	<body>
@@ -26,7 +29,7 @@
       			</li>
       			<li class="menu">
 				<div class="dropdown">
-  					<button class="dropbut">Anime</button>
+  					<button class="active">Anime</button>
   					<div class="dropdown-content">
     						<a href="animenav.php">Alphabetical</a>
     						<a href="animeadd.php">Submission</a>
@@ -87,289 +90,289 @@
 			</ul>
 		</div>
 		<div class="headers"> Anime </div>
-		<div class="subheaders"><a name="a">A</a></div>
+		<div class="subheaders" id="a">A</div>
 		<div>		
 		<?php
 				$letter = "A";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="b">B</a></div>
+		<div class="subheaders" id="b">B</div>
 		<div>		
 		<?php
 				$letter = "B";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="c">C</a></div>
+		<div class="subheaders" id="c">C</div>
 		<div>		
 		<?php
 				$letter = "C";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="d">D</a></div>
+		<div class="subheaders" id="d">D</div>
 		<div>		
 		<?php
 				$letter = "D";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="e">E</a></div>
+		<div class="subheaders" id="e">E</div>
 		<div>		
 		<?php
 				$letter = "E";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="f">F</a></div>
+		<div class="subheaders" id="f">F</div>
 		<div>		
 		<?php
 				$letter = "F";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="g">G</a></div>
+		<div class="subheaders" id="g">G</div>
 		<div>		
 		<?php
 				$letter = "G";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="h">H</a></div>
+		<div class="subheaders" id="h">H</div>
 		<div>		
 		<?php
 				$letter = "H";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="i">I</a></div>
+		<div class="subheaders" id="i">I</div>
 		<div>		
 		<?php
 				$letter = "I";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="j">J</a></div>
+		<div class="subheaders" id="j">J</div>
 		<div>		
 		<?php
 				$letter = "J";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="k">K</a></div>
+		<div class="subheaders" id="k">K</div>
 		<div>		
 		<?php
 				$letter = "K";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="l">L</a></div>
+		<div class="subheaders" id="l">L</div>
 		<div>		
 		<?php
 				$letter = "L";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="m">M</a></div>
+		<div class="subheaders" id="m">M</div>
 		<div>		
 		<?php
 				$letter = "M";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="n">N</a></div>
+		<div class="subheaders" id="n">N</div>
 		<div>		
 		<?php
 				$letter = "N";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="o">O</a></div>
+		<div class="subheaders" id="o">O</div>
 		<div>		
 		<?php
 				$letter = "O";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="p">P</a></div>
+		<div class="subheaders" id="p">P</div>
 		<div>		
 		<?php
 				$letter = "P";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="q">Q</a></div>
+		<div class="subheaders" id="q">Q</div>
 		<div>		
 		<?php
 				$letter = "Q";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="r">R</a></div>
+		<div class="subheaders" id="r">R</div>
 		<div>		
 		<?php
 				$letter = "R";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="s">S</a></div>
+		<div class="subheaders" id="s">S</div>
 		<div>		
 		<?php
 				$letter = "S";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="t">T</a></div>
+		<div class="subheaders" id="t">T</div>
 		<div>		
 		<?php
 				$letter = "t";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="u">U</a></div>
+		<div class="subheaders" id="u">U</div>
 		<div>		
 		<?php
 				$letter = "U";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="v">V</a></div>
+		<div class="subheaders" id="v">V</div>
 		<div>		
 		<?php
 				$letter = "V";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="w">W</a></div>
+		<div class="subheaders" id="w">W</div>
 		<div>		
 		<?php
 				$letter = "W";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="x">X</a></div>
+		<div class="subheaders" id="x">X</div>
 		<div>		
 		<?php
 				$letter = "X";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="y">Y</a></div>
+		<div class="subheaders" id="y">Y</div>
 		<div>		
 		<?php
 				$letter = "Y";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
-		<div class="subheaders"><a name="z">Z</a></div>
+		<div class="subheaders" id="z">Z</div>
 		<div>		
 		<?php
 				$letter = "Z";
 				$animetitles = $dao->getAlphaAnimes ($letter);
 				foreach($animetitles as $animetitle) 
 				{
-					echo "<a href='animetemp.php?title=".$animetitle['title']."'>" . htmlspecialchars($animetitle['title']). "</a>";
+					echo "<a class='animetitle' href='animetemp.php?title=".urlencode($animetitle['title'])."'>" . htmlspecialchars($animetitle['title']). "</a>";
 				}
 		?>
 		</div>
