@@ -100,12 +100,15 @@
 			else {
 			echo '<div class="submitbut"><input type="submit" value="Submit"></div>' ;} ?>
 
-		<?php if (isset($_SESSION['message'])) {
-			$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "good" : "bad";
-			echo "<div class='" . $sentiment . "' id='message'>" . $_SESSION['message'] . "</div>";
-		}
-		unset($_SESSION['message']);
-      	unset($_SESSION['form_input']);?>
+			<?php
+     				 if (isset($_SESSION['message'])) {
+					$sentiment = (isset($_SESSION['good']) && ($_SESSION['good'])) ? "valid" : "invalid";
+        			 echo "<div id='message' class='" . $sentiment . "'>" . $_SESSION['message'] . "</div>";
+						}
+					   unset($_SESSION['message']);
+					   unset($_SESSION['good']);
+					   unset($_SESSION['form_input']);
+      		?>
 		</form>
 
 		<?php
